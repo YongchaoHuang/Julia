@@ -229,7 +229,7 @@ ppca = pPCA(expression_matrix, k) # instantiate the probabilistic model
 chain_ppca = sample(ppca, NUTS(0.65), 2000);
 ```
 
-The sampling process takes about 7 mins. The samples are saved in the Chains struc `chain_ppca`, whose shape can be checked:
+The sampling process takes about 7 mins on a 4-core x86_64 computer. The samples are saved in the Chains struc `chain_ppca`, whose shape can be checked:
 
 ```julia
 size(chain_ppca)
